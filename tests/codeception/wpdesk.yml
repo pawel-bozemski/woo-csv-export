@@ -1,0 +1,11 @@
+plugin-slug: csv-exporter
+plugin-file: csv-exporter/csv-exporter.php
+plugin-title: CSV Exporter
+plugin-product-id: CSV Exporter
+plugins:
+    repository:
+        - woocommerce
+    activate:
+        - woocommerce
+prepare-database:
+    - option set woocommerce_show_marketplace_suggestions "no"
