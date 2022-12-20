@@ -4,9 +4,6 @@ build-coverage
 .commit
 /assets/**/*.min.css
 /assets/**/*.min.js
-/lang/*
-/lang/*-*_*.po
-!/lang/*_*.po
 /.plugin-version
 /.release-notes
 /assets/dist/*
