@@ -5,8 +5,8 @@ build-coverage
 /assets/**/*.min.css
 /assets/**/*.min.js
 /lang/*
-!/lang/*_*.po
 /lang/*-*_*.po
+!/lang/*_*.po
 /.plugin-version
 /.release-notes
 /assets/dist/*
