@@ -1,4 +1,4 @@
-/vendor/
+/vendor/*/
 /vendor_prefixed/
 .idea
 build-coverage
@@ -11,5 +11,9 @@ build-coverage
 /lang/*-*_*.po
 /.plugin-version
 /.release-notes
-/assets/dist/
+/assets/dist/*
 /node_modules/
+
+!/vendor/composer/
+!/vendor/autoload.php
+!/assets/dist/app.css

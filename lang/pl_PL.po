@@ -39,3 +39,27 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "https://www.wpdesk.net/"
 msgstr ""
+
+msgid "Export Products"
+msgstr "Eksport Produktów"
+
+msgid "CSV Exporter"
+msgstr "CSV Eksporter"
+
+msgid "This tool allows you to export all products to csv file"
+msgstr "To narzędzie umożliwia eksport produktów do pliku csv"
+
+msgid "Product name"
+msgstr "Nazwa produktu"
+
+msgid "SKU"
+msgstr ""
+
+msgid "Categories"
+msgstr "Kategorie"
+
+msgid "Regural Price"
+msgstr "Cena regularna"
+
+msgid "Sale Price"
+msgstr "Cena ze zniżką"

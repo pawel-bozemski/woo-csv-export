@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Plugin Name: CSV Exporter
  * Plugin URI: https://www.wpdesk.net/
@@ -62,6 +63,9 @@ $requirements = [
 		],
 	],
 ];
-
+function add_my_stylesheet() {
+	wp_enqueue_style( 'myCSS', plugins_url( '/assets/dist/app.css', __FILE__ ), '1.0.0', 'all' );
+}
+add_action( 'admin_print_styles', 'add_my_stylesheet' );
 // todo: only for free plugins. For paid plugins use plugin-init-php52.php.
 require __DIR__ . '/vendor_prefixed/wpdesk/wp-plugin-flow-common/src/plugin-init-php52-free.php';
