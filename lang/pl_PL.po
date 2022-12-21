@@ -46,7 +46,7 @@ msgstr "Eksport Produktów"
 msgid "CSV Exporter"
 msgstr "CSV Eksporter"
 
-msgid "This tool allows you to export all products to csv file"
+msgid "This tool allows you to export products to csv file"
 msgstr "To narzędzie umożliwia eksport produktów do pliku csv"
 
 msgid "Product name"
@@ -63,3 +63,15 @@ msgstr "Cena regularna"
 
 msgid "Sale Price"
 msgstr "Cena ze zniżką"
+
+msgid "No products found"
+msgstr "Nie znaleziono produktów"
+
+msgid "You can export 250 products at once"
+msgstr "Maksymalna liczba produktów do eksportu wynosi 250"
+
+msgid "If you want to export more than 250 products, skip products already exported, by typing number of products to skip"
+msgstr "Jeżeli chcesz wyeksportować więcej niż 250 produtków, pomiń produkty już wyeksportowane wpisując liczbę produktów do pominięcia"
+
+msgid "How many products to skip?"
+msgstr "Liczba produktów do pominięcia"

@@ -3,7 +3,7 @@
         'name' => 'wpdesk/csv-exporter',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => 'd9a35c42f7b344035c64ce8367e125962b8f1fe5',
+        'reference' => '034e45dd9a4fcf2cba49edbeff550a3b53c0deb1',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -31,7 +31,7 @@
         'wpdesk/csv-exporter' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => 'd9a35c42f7b344035c64ce8367e125962b8f1fe5',
+            'reference' => '034e45dd9a4fcf2cba49edbeff550a3b53c0deb1',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

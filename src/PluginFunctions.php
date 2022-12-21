@@ -19,16 +19,18 @@ use SplTempFileObject;
 class PluginFunctions {
 
 
+
 	/**
 	 * Get woo products.
 	 *
 	 * @return array<mixed>
 	 */
-	public function get_products(): array {
+	public function get_products( $offset ): array {
 		$products = [];
 		$query    = new \WP_Query(
 			[
-				'posts_per_page' => -1,
+				'posts_per_page' => 250,
+				'offset'         => $offset,
 				'post_type'      => [ 'product', 'product_variation' ],
 			]
 		);
@@ -63,7 +65,6 @@ class PluginFunctions {
 
 			wp_reset_postdata();
 		}
-
 		return $products;
 	}
 
@@ -72,7 +73,7 @@ class PluginFunctions {
 	 *
 	 * @return void
 	 */
-	public function create_csv() {
+	public function create_csv( $offset ) {
 		$header[] = [
 			__( 'Product name', 'csv-exporter' ),
 			__( 'SKU', 'csv-exporter' ),
@@ -80,14 +81,17 @@ class PluginFunctions {
 			__( 'Regural Price', 'csv-exporter' ),
 			__( 'Sale Price', 'csv-exporter' ),
 		];
-		$products = $this->get_products();
-		$products = array_merge( $header, $products );
+		$products = $this->get_products( $offset );
 		try {
 			$file = Writer::createFromFileObject( new SplTempFileObject() );
 			$file->setOutputBOM( Reader::BOM_UTF8 );
 			$file->setDelimiter( ',' );
-
-			$file->insertAll( $products );
+			if ( count( $products ) == 0 ) {
+				$products[] = __( 'No products found', 'csv-exporter' );
+				$file->insertOne( $products );
+			} else {
+				$file->insertAll( $products );
+			}
 			ob_end_clean();
 			$file->output( 'produkty.csv' );
 			die;
